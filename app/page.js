@@ -1,17 +1,51 @@
 const services = [
-  "Interior Painting",
-  "Exterior Painting",
-  "Home Repainting",
-  "Texture Painting",
-  "Royal 3D Painting",
-  "Polish Work",
-  "Waterproofing",
-  "Complete Painting Solutions",
+  {
+    title: "Interior Painting",
+    text: "Smooth, clean and professional painting for bedrooms, halls, kitchens and other interior spaces.",
+  },
+  {
+    title: "Exterior Painting",
+    text: "Durable exterior painting that gives your home a fresh and attractive finish.",
+  },
+  {
+    title: "Home Repainting",
+    text: "Give your existing home a fresh new look with quality repainting and finishing.",
+  },
+  {
+    title: "Texture Painting",
+    text: "Decorative texture finishes to create a stylish and unique look for your walls.",
+  },
+  {
+    title: "Royal 3D Painting",
+    text: "Premium decorative wall finishes for customers looking for a distinctive appearance.",
+  },
+  {
+    title: "Polish Work",
+    text: "Professional polishing and finishing work for doors, furniture and wooden surfaces.",
+  },
+  {
+    title: "Waterproofing",
+    text: "Waterproofing solutions to help protect your home from moisture and water-related problems.",
+  },
+  {
+    title: "Complete Painting Works",
+    text: "Complete painting and finishing solutions for residential properties.",
+  },
+];
+
+const reasons = [
+  "Experienced painting workmanship",
+  "Clean and professional finishing",
+  "Interior and exterior solutions",
+  "Quality-focused work",
+  "Residential painting specialists",
+  "Serving Hyderabad and Telangana",
 ];
 
 export default function Home() {
   return (
     <main>
+      {/* NAVBAR */}
       <header className="nav">
         <div className="logo">
           THE ROLLING <span>BRUSH</span>
@@ -22,79 +56,170 @@ export default function Home() {
         </a>
       </header>
 
+      {/* HERO */}
       <section className="hero">
         <div className="heroContent">
-          <p className="eyebrow">HYDERABAD • TELANGANA</p>
+          <p className="eyebrow">PROFESSIONAL PAINTING SERVICES</p>
 
           <h1>
-            Transform Your
+            Give Your Home
             <br />
-            <span>Home With Color.</span>
+            <span>A Fresh New Look.</span>
           </h1>
 
           <p className="heroText">
-            Professional painting services for homes and properties.
-            Quality finishing, reliable workmanship and complete painting
-            solutions.
+            Professional interior, exterior and repainting services in
+            Hyderabad and across Telangana. Quality workmanship with a
+            clean and beautiful finish.
           </p>
 
           <div className="buttons">
             <a href="tel:9014909098" className="primary">
-              Call 9014909098
+              📞 Get a Free Quote
             </a>
 
             <a
-              href="https://wa.me/919014909098"
+              href="https://wa.me/919014909098?text=Hi%20The%20Rolling%20Brush%2C%20I%20would%20like%20to%20know%20about%20your%20painting%20services."
               className="secondary"
               target="_blank"
               rel="noreferrer"
             >
-              WhatsApp Us
+              💬 WhatsApp Us
             </a>
           </div>
         </div>
       </section>
 
+      {/* INTRO */}
+      <section className="intro">
+        <div>
+          <p className="eyebrow">THE ROLLING BRUSH</p>
+          <h2>Painting that makes your space feel new.</h2>
+        </div>
+
+        <p>
+          We provide reliable painting and finishing services for homes and
+          residential properties. Whether you need a simple repaint,
+          decorative wall finish or complete painting work, we are ready
+          to help.
+        </p>
+      </section>
+
+      {/* SERVICES */}
       <section className="section">
-        <p className="eyebrow">WHAT WE DO</p>
-        <h2>Painting Services</h2>
+        <p className="eyebrow">OUR SERVICES</p>
+
+        <h2>Everything your home needs.</h2>
 
         <div className="services">
-          {services.map((service) => (
-            <div className="serviceCard" key={service}>
-              <div className="brushIcon">✦</div>
-              <h3>{service}</h3>
-              <p>
-                Professional workmanship with attention to detail and a
-                clean, quality finish.
-              </p>
+          {services.map((service, index) => (
+            <div className="serviceCard" key={service.title}>
+              <div className="serviceNumber">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <h3>{service.title}</h3>
+
+              <p>{service.text}</p>
+
+              <a
+                href={`https://wa.me/919014909098?text=Hi%2C%20I%20am%20interested%20in%20${encodeURIComponent(
+                  service.title
+                )}.`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Enquire →
+              </a>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="about">
-        <div>
-          <p className="eyebrow">ABOUT US</p>
-          <h2>Bringing fresh life to your spaces.</h2>
+      {/* WHY US */}
+      <section className="whyUs">
+        <div className="whyContent">
+          <p className="eyebrow">WHY CHOOSE US</p>
+
+          <h2>
+            A better finish starts with the right painting team.
+          </h2>
+
+          <p>
+            At The Rolling Brush, we focus on quality workmanship, neat
+            finishing and dependable service. Our goal is simple — to make
+            your home look fresh, beautiful and well finished.
+          </p>
         </div>
 
-        <p>
-          The Rolling Brush Painting Services provides residential painting
-          and finishing solutions in Habsiguda, Hyderabad and across
-          Telangana. From repainting homes to texture finishes,
-          waterproofing and polish work, we handle all types of painting
-          requirements.
+        <div className="reasons">
+          {reasons.map((reason, index) => (
+            <div className="reason" key={reason}>
+              <span>✓</span>
+              <p>{reason}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* GALLERY PLACEHOLDER */}
+      <section className="gallery">
+        <p className="eyebrow">OUR WORK</p>
+
+        <h2>See the difference.</h2>
+
+        <p className="galleryIntro">
+          Real project photos will be added here soon.
+        </p>
+
+        <div className="galleryGrid">
+          <div className="galleryBox">
+            <span>Project Photo</span>
+          </div>
+
+          <div className="galleryBox">
+            <span>Project Photo</span>
+          </div>
+
+          <div className="galleryBox">
+            <span>Project Photo</span>
+          </div>
+        </div>
+
+        <p className="photoNote">
+          📸 Project photos coming soon
         </p>
       </section>
 
-      <section className="contact">
-        <p className="eyebrow">GET IN TOUCH</p>
-        <h2>Ready to refresh your home?</h2>
+      {/* SERVICE AREA */}
+      <section className="area">
+        <p className="eyebrow">SERVICE AREA</p>
+
+        <h2>Serving homes across Telangana.</h2>
 
         <p>
-          Contact <strong>Gaikwad Pandu Ranga</strong> for painting
-          enquiries and quotations.
+          Based in <strong>Habsiguda, Hyderabad</strong>, The Rolling Brush
+          provides painting services throughout Hyderabad and across
+          Telangana.
+        </p>
+
+        <div className="areaTags">
+          <span>Hyderabad</span>
+          <span>Habsiguda</span>
+          <span>Telangana</span>
+          <span>Residential Projects</span>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="contact">
+        <p className="eyebrow">GET IN TOUCH</p>
+
+        <h2>Let's give your home a fresh look.</h2>
+
+        <p>
+          Contact <strong>Gaikwad Pandu Ranga</strong> for enquiries,
+          quotations and painting requirements.
         </p>
 
         <div className="contactButtons">
@@ -109,18 +234,38 @@ export default function Home() {
           </a>
 
           <a href="mailto:TheRollingbrushes@gmail.com">
-            ✉️ Email Us
+            ✉️ Email
           </a>
         </div>
 
-        <p className="location">📍 Habsiguda, Hyderabad • Serving Telangana</p>
+        <p className="location">
+          📍 Habsiguda, Hyderabad • Serving All Over Telangana
+        </p>
       </section>
 
+      {/* FOOTER */}
       <footer>
         <div>THE ROLLING BRUSH</div>
-        <p>Professional Painting Services • Hyderabad & Telangana</p>
-        <p>© {new Date().getFullYear()} The Rolling Brush Painting Services</p>
+
+        <p>
+          Professional Painting Services • Hyderabad & Telangana
+        </p>
+
+        <p>
+          © {new Date().getFullYear()} The Rolling Brush Painting Services
+        </p>
       </footer>
+
+      {/* FLOATING WHATSAPP */}
+      <a
+        href="https://wa.me/919014909098?text=Hi%20The%20Rolling%20Brush%2C%20I%20would%20like%20a%20painting%20quotation."
+        className="whatsappFloat"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat on WhatsApp"
+      >
+        💬
+      </a>
     </main>
   );
 }
