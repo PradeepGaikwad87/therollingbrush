@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f7f5f0;
+  background: #f6f3ed;
   color: #171717;
 }
 
@@ -24,13 +24,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
-  border-bottom: 1px solid #e8e4dc;
+  background: #fff;
+  border-bottom: 1px solid #e5e0d7;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 2px;
 }
 
@@ -39,40 +42,58 @@ a {
 }
 
 .navButton {
-  padding: 12px 22px;
-  border-radius: 30px;
   background: #171717;
-  color: white;
+  color: #fff;
+  padding: 12px 23px;
+  border-radius: 30px;
   font-size: 14px;
   font-weight: 700;
 }
 
+/* HERO */
+
 .hero {
-  min-height: 680px;
+  min-height: 720px;
   display: flex;
   align-items: center;
-  padding: 90px 7%;
+  padding: 100px 7%;
+  position: relative;
+  overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(247,245,240,0.98) 0%, rgba(247,245,240,0.86) 48%, rgba(247,245,240,0.25) 100%),
-    radial-gradient(circle at 80% 40%, #d9b77a, #f7f5f0 55%);
+    radial-gradient(circle at 85% 25%, #d7b36e 0, transparent 27%),
+    radial-gradient(circle at 75% 75%, #cfc7b6 0, transparent 25%),
+    #f6f3ed;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  right: -130px;
+  bottom: -160px;
+  border-radius: 50%;
+  border: 70px solid rgba(255, 255, 255, 0.5);
 }
 
 .heroContent {
-  max-width: 720px;
+  max-width: 760px;
+  position: relative;
+  z-index: 2;
 }
 
 .eyebrow {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-size: clamp(48px, 7vw, 88px);
-  line-height: 0.98;
   margin: 0;
-  letter-spacing: -4px;
+  font-size: clamp(52px, 8vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -5px;
 }
 
 .hero h1 span {
@@ -80,15 +101,14 @@ a {
 }
 
 .heroText {
-  max-width: 590px;
+  max-width: 620px;
+  color: #555;
   font-size: 18px;
   line-height: 1.7;
-  color: #555;
   margin: 30px 0;
 }
 
-.buttons,
-.contactButtons {
+.buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -96,31 +116,65 @@ a {
 
 .primary,
 .secondary {
-  padding: 15px 25px;
-  border-radius: 30px;
+  padding: 16px 25px;
+  border-radius: 40px;
   font-weight: 700;
+  transition: 0.2s;
 }
 
 .primary {
   background: #171717;
-  color: #fff;
+  color: white;
 }
 
 .secondary {
   border: 1px solid #171717;
 }
 
-.section {
-  padding: 100px 7%;
-  background: #ffffff;
+.primary:hover,
+.secondary:hover,
+.navButton:hover {
+  transform: translateY(-2px);
 }
 
+/* INTRO */
+
+.intro {
+  padding: 110px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  background: #fff;
+}
+
+.intro h2,
 .section h2,
-.about h2,
+.whyUs h2,
+.gallery h2,
+.area h2,
 .contact h2 {
-  font-size: clamp(38px, 5vw, 62px);
-  margin: 0 0 45px;
-  letter-spacing: -2px;
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+.intro > p {
+  color: #666;
+  font-size: 19px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* SERVICES */
+
+.section {
+  padding: 110px 7%;
+  background: #f6f3ed;
+}
+
+.section h2 {
+  margin-bottom: 55px;
 }
 
 .services {
@@ -130,68 +184,194 @@ a {
 }
 
 .serviceCard {
+  min-height: 270px;
   padding: 30px;
-  min-height: 210px;
-  border: 1px solid #e4e0d8;
-  background: #faf9f6;
-  border-radius: 18px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid #e7e1d7;
+  transition: 0.25s;
 }
 
-.brushIcon {
-  font-size: 28px;
-  margin-bottom: 25px;
+.serviceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.serviceNumber {
+  font-size: 13px;
+  font-weight: 800;
+  color: #a27730;
+  margin-bottom: 45px;
 }
 
 .serviceCard h3 {
-  margin: 0 0 12px;
-  font-size: 19px;
+  margin: 0 0 13px;
+  font-size: 20px;
 }
 
 .serviceCard p {
   color: #666;
   line-height: 1.6;
   font-size: 14px;
+  min-height: 70px;
 }
 
-.about {
-  padding: 100px 7%;
+.serviceCard a {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* WHY US */
+
+.whyUs {
+  padding: 110px 7%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  background: #171717;
+  gap: 90px;
+  background: #191919;
   color: white;
 }
 
-.about p:last-child {
-  color: #c8c8c8;
-  font-size: 18px;
+.whyContent > p:last-child {
+  color: #bcbcbc;
   line-height: 1.8;
+  font-size: 17px;
+  max-width: 550px;
+  margin-top: 30px;
 }
 
-.contact {
+.reasons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.reason {
+  border: 1px solid #3a3a3a;
+  padding: 22px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border-radius: 14px;
+}
+
+.reason span {
+  font-size: 20px;
+}
+
+.reason p {
+  margin: 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* GALLERY */
+
+.gallery {
+  padding: 110px 7%;
+  background: #fff;
+}
+
+.gallery h2 {
+  margin-bottom: 20px;
+}
+
+.galleryIntro {
+  color: #777;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.galleryBox {
+  height: 300px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, #e4dfd5, #bfb5a4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-weight: 700;
+}
+
+.photoNote {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+/* SERVICE AREA */
+
+.area {
   padding: 100px 7%;
   text-align: center;
-  background: #d9b77a;
+  background: #d9b574;
+}
+
+.area h2 {
+  max-width: 850px;
+  margin: auto;
+}
+
+.area > p {
+  max-width: 700px;
+  margin: 25px auto;
+  line-height: 1.7;
+}
+
+.areaTags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.areaTags span {
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.45);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* CONTACT */
+
+.contact {
+  padding: 110px 7%;
+  text-align: center;
+  background: #f6f3ed;
 }
 
 .contact h2 {
-  margin-bottom: 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
 .contact > p {
   max-width: 650px;
-  margin: 0 auto 35px;
+  margin: 25px auto 35px;
   line-height: 1.7;
+  color: #555;
 }
 
 .contactButtons {
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .contactButtons a {
-  padding: 15px 24px;
   background: #171717;
   color: white;
+  padding: 15px 24px;
   border-radius: 30px;
   font-weight: 700;
 }
@@ -201,31 +381,63 @@ a {
   font-weight: 700;
 }
 
+/* FOOTER */
+
 footer {
-  padding: 45px 7%;
   background: #111;
   color: white;
   text-align: center;
+  padding: 45px 7%;
 }
 
 footer div {
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 3px;
 }
 
 footer p {
-  color: #999;
+  color: #888;
   font-size: 13px;
 }
+
+/* WHATSAPP */
+
+.whatsappFloat {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* MOBILE */
 
 @media (max-width: 900px) {
   .services {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about {
+  .intro,
+  .whyUs {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 40px;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryBox {
+    height: 250px;
   }
 }
 
@@ -235,7 +447,8 @@ footer p {
   }
 
   .logo {
-    font-size: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
   }
 
   .navButton {
@@ -243,38 +456,60 @@ footer p {
   }
 
   .hero {
-    padding: 75px 5%;
-    min-height: 600px;
+    min-height: 650px;
+    padding: 80px 5%;
   }
 
   .hero h1 {
-    font-size: 50px;
-    letter-spacing: -2px;
+    font-size: 53px;
+    letter-spacing: -3px;
   }
 
   .heroText {
     font-size: 16px;
   }
 
+  .buttons {
+    flex-direction: column;
+  }
+
+  .primary,
+  .secondary {
+    text-align: center;
+    width: 100%;
+  }
+
+  .intro,
   .section,
-  .about,
+  .whyUs,
+  .gallery,
+  .area,
   .contact {
-    padding: 70px 5%;
+    padding: 75px 5%;
+  }
+
+  .intro h2,
+  .section h2,
+  .whyUs h2,
+  .gallery h2,
+  .area h2,
+  .contact h2 {
+    font-size: 42px;
   }
 
   .services {
     grid-template-columns: 1fr;
   }
 
-  .buttons,
+  .reasons {
+    grid-template-columns: 1fr;
+  }
+
   .contactButtons {
     flex-direction: column;
   }
 
-  .primary,
-  .secondary,
   .contactButtons a {
-    text-align: center;
     width: 100%;
   }
 }
