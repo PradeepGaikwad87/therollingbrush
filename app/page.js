@@ -43,8 +43,32 @@ const reasons = [
 ];
 
 export default function Home() {
+  const businessSchema = {
+    "@context": "https://schema.org",
+    "@type": "PaintingContractor",
+    name: "The Rolling Brush Painting Services",
+    url: "https://therollingbrush.in",
+    telephone: "+919014909098",
+    email: "TheRollingbrushes@gmail.com",
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Hyderabad",
+      },
+      {
+        "@type": "State",
+        name: "Telangana",
+      },
+    ],
+  };
   return (
     <main>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(businessSchema),
+        }}
+      />
       {/* NAVBAR */}
       <header className="nav">
         <div className="logo">
