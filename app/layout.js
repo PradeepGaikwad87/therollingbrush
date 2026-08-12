@@ -1,3 +1,4 @@
+import "./globals.css";
 export const metadata = {
   title: "The Rolling Brush Painting Services | Hyderabad",
   description:
