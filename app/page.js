@@ -73,7 +73,7 @@ export default function Home() {
       <header className="nav">
         <div className="logo">
   <img
-        src="/Logo.png"
+        src="/Logo.png.jpeg"
           alt="The Rolling Brush"
           className="logoImage"
   />
