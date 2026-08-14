@@ -509,8 +509,8 @@ footer p {
     flex-direction: column;
   }
   .logoImage {
-  width: 100px;
-  height:  40px;
+  width: 120px;
+  height:  45px;
   object-fit: contain;
   display: block;
 }
