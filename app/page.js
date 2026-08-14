@@ -73,10 +73,15 @@ export default function Home() {
       <header className="nav">
         <div className="logo">
   <img
-        src="/logo.png.jpeg"
-          alt="The Rolling Brush"
-          className="logoImage"
-  />
+  src="/logo.png.jpeg"
+  alt="The Rolling Brush"
+  style={{
+    width: "100px",
+    height: "40px",
+    objectFit: "contain",
+    display: "block"
+  }}
+/>
 </div>
         <a href="tel:9014909098" className="navButton">
           Call Now
