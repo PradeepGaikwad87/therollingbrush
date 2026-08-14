@@ -72,7 +72,11 @@ export default function Home() {
       {/* NAVBAR */}
       <header className="nav">
         <div className="logo">
-  <img src="/Logo.png.jpeg" alt="The Rolling Brush" />
+  <img
+        src="/Logo.png"
+          alt="The Rolling Brush"
+          className="logoImage"
+  />
 </div>
         <a href="tel:9014909098" className="navButton">
           Call Now
