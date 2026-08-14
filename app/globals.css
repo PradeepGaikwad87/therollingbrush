@@ -508,6 +508,11 @@ footer p {
   .contactButtons {
     flex-direction: column;
   }
+  .logoImage {
+  width: 150px;
+  height: auto;
+  display: block;
+}
 
   .contactButtons a {
     width: 100%;
