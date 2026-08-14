@@ -76,8 +76,8 @@ export default function Home() {
   src="/logo.png.jpeg"
   alt="The Rolling Brush"
   style={{
-    width: "100px",
-    height: "40px",
+    width: "120px",
+    height: "45px",
     objectFit: "contain",
     display: "block"
   }}
