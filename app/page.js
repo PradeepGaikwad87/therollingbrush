@@ -104,6 +104,17 @@ export default function Home() {
             Hyderabad and across Telangana. Quality workmanship with a
             clean and beautiful finish.
           </p>
+              <section className="gallery">
+  <h2>Our Recent Work</h2>
+  <p>Quality painting work done by The Rolling Brush.</p>
+
+  <div className="galleryGrid">
+    <img src="/interior.jpg" alt="Interior Painting" />
+    <img src="/exterior.jpg" alt="Exterior Painting" />
+    <img src="/texture.jpg" alt="Texture Painting" />
+    <img src="/bedroom.jpg" alt="Bedroom Painting" />
+  </div>
+</section>
 
           <div className="buttons">
             <a href="tel:9014909098" className="primary">
