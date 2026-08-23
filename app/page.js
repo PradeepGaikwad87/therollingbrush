@@ -109,10 +109,10 @@ export default function Home() {
   <p>Quality painting work done by The Rolling Brush.</p>
 
   <div className="galleryGrid">
-    <img src="/interior.jpg" alt="Interior Painting" />
-    <img src="/exterior.jpg" alt="Exterior Painting" />
-    <img src="/texture.jpg" alt="Texture Painting" />
-    <img src="/bedroom.jpg" alt="Bedroom Painting" />
+    <img src="/interior.jpeg" alt="Interior Painting" />
+    <img src="/exterior.jpeg" alt="Exterior Painting" />
+    <img src="/texture.jpeg" alt="Texture Painting" />
+    <img src="/bedroom.jpeg" alt="Bedroom Painting" />
   </div>
 </section>
 
