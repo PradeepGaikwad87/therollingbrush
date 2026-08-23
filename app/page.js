@@ -127,8 +127,6 @@ export default function Home() {
                <img src="/exterior (7).jpeg" alt="Exterior Painting" />
                <img src="/exterior (8).jpeg" alt="Exterior Painting" />
                <img src="/exterior (9).jpeg" alt="Exterior Painting" />
-    <img src="/polish (1).jpeg" alt="Texture Painting" />
-    <img src="/bedroom.jpeg" alt="Bedroom Painting" />
   </div>
 </section>
 
