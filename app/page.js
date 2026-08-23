@@ -218,21 +218,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* GALLERY PLACEHOLDER */}
-      <section className="gallery">
-        <p className="eyebrow">OUR WORK</p>
-
-        <h2>See the difference.</h2>
-
-        <p className="galleryIntro">
-          Real project photos will be added here soon.
-        </p>
-
-       
-        <p className="photoNote">
-          📸 Project photos coming soon
-        </p>
-      </section>
+      
 
       {/* SERVICE AREA */}
       <section className="area">
