@@ -110,7 +110,6 @@ export default function Home() {
 
   <div className="galleryGrid">
     <img src="/interiordesigns (1).jpeg" alt="Interior Painting" />
-              <img src="/interiordesigns (2).jpeg." alt="Interior Painting" />
               <img src="/interiordesigns (3).jpeg" alt="Interior Painting" />
               <img src="/interiordesigns (4).jpeg" alt="Interior Painting" />
               <img src="/interiordesigns (5).jpeg" alt="Interior Painting" />
