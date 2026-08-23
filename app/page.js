@@ -109,15 +109,15 @@ export default function Home() {
   <p>Quality painting work done by The Rolling Brush.</p>
 
   <div className="galleryGrid">
-    <img src="/interiordesigns(1).jpeg" alt="Interior Painting" />
-              <img src="/interiordesigns(2).jpeg" alt="Interior Painting" />
-              <img src="/interiordesigns(3).jpeg" alt="Interior Painting" />
-              <img src="/interiordesigns(4).jpeg" alt="Interior Painting" />
-              <img src="/interiordesigns(5).jpeg" alt="Interior Painting" />
-              <img src="/interiordesigns(6).jpeg" alt="Interior Painting" />
-              <img src="/interiordesigns(7).jpeg" alt="Interior Painting" />
-              <img src="/interiordesigns(8).jpeg" alt="Interior Painting" />
-              <img src="/interiordesigns(9).jpeg" alt="Interior Painting" />
+    <img src="/interiordesigns (1).jpeg" alt="Interior Painting" />
+              <img src="/interiordesigns (2).jpeg." alt="Interior Painting" />
+              <img src="/interiordesigns (3).jpeg" alt="Interior Painting" />
+              <img src="/interiordesigns (4).jpeg" alt="Interior Painting" />
+              <img src="/interiordesigns (5).jpeg" alt="Interior Painting" />
+              <img src="/interiordesigns (6).jpeg" alt="Interior Painting" />
+              <img src="/interiordesigns (7).jpeg" alt="Interior Painting" />
+              <img src="/interiordesigns (8).jpeg" alt="Interior Painting" />
+              <img src="/interiordesigns (9).jpeg" alt="Interior Painting" />
     <img src="/exterior(1).jpeg" alt="Exterior Painting" />
     <img src="/texture.jpeg" alt="Texture Painting" />
     <img src="/bedroom.jpeg" alt="Bedroom Painting" />
