@@ -118,8 +118,16 @@ export default function Home() {
               <img src="/interiordesigns (7).jpeg" alt="Interior Painting" />
               <img src="/interiordesigns (8).jpeg" alt="Interior Painting" />
               <img src="/interiordesigns (9).jpeg" alt="Interior Painting" />
-    <img src="/exterior(1).jpeg" alt="Exterior Painting" />
-    <img src="/texture.jpeg" alt="Texture Painting" />
+    <img src="/exterior (1).jpeg" alt="Exterior Painting" />
+               <img src="/exterior (2).jpeg" alt="Exterior Painting" />
+               <img src="/exterior (3).jpeg" alt="Exterior Painting" />
+               <img src="/exterior (4).jpeg" alt="Exterior Painting" />
+               <img src="/exterior (5).jpeg" alt="Exterior Painting" />
+               <img src="/exterior (6).jpeg" alt="Exterior Painting" />
+               <img src="/exterior (7).jpeg" alt="Exterior Painting" />
+               <img src="/exterior (8).jpeg" alt="Exterior Painting" />
+               <img src="/exterior (9).jpeg" alt="Exterior Painting" />
+    <img src="/polish (1).jpeg" alt="Texture Painting" />
     <img src="/bedroom.jpeg" alt="Bedroom Painting" />
   </div>
 </section>
