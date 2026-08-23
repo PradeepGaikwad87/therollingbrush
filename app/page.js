@@ -228,20 +228,7 @@ export default function Home() {
           Real project photos will be added here soon.
         </p>
 
-        <div className="galleryGrid">
-          <div className="galleryBox">
-            <span>Project Photo</span>
-          </div>
-
-          <div className="galleryBox">
-            <span>Project Photo</span>
-          </div>
-
-          <div className="galleryBox">
-            <span>Project Photo</span>
-          </div>
-        </div>
-
+       
         <p className="photoNote">
           📸 Project photos coming soon
         </p>
